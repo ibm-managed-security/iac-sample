@@ -25,8 +25,16 @@ Executing Terraform is a two step process:
 This can be performed in a single command line execution:
 ```
 cd environments/dev
-jsonnet main.tf.jsonnet > main.tf.json && terraform plan
+jsonnet main.tf.jsonnet > main.tf.json && terraform plan -out plan.out
 ```
+
+Review the plan, and if satisfied:
+```
+terraform apply plan.out
+```
+
+Once Terraform completes, you should be able to visit your new site at: https://<your unique route>.mybluemix.net/ .
+You should see a heading that says 'Welcome.'
 
 That's it.
 
