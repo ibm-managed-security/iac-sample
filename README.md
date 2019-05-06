@@ -40,3 +40,17 @@ Once Terraform completes, you should be able to visit your new site at: https://
 You should see a heading that says 'Welcome.'
 
 That's it.
+
+## Going Further
+
+This is a basic solution that shows how you can securely and extensibly manage
+your infrastructure as code. There are numerous ways to take this further:
+
+* Replace transcrypt with Hashicorp Vault
+* Replace Jsonnet with another configuration management tool such as Google's Cue,
+  or even a scripting language to generate JSON
+* Add other declarative tools such as Helm or Ansible into a toolchain
+* Enable use of GitHub Pull Requests and required approvals to facilitate a
+  change control workflow
+* Automate the 'plan' and 'apply' of your infrastructure changes via TravisCI
+  after getting comfortable with it
