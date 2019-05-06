@@ -1,5 +1,8 @@
 # iac-sample
 
+This example shows how to securely (with transcrypt) and extensibly (with Jsonnet)
+manage your infrastructure as code (with Terraform).
+
 ## Getting Started
 
 * Install [Terraform](https://learn.hashicorp.com/terraform/getting-started/install.html)
@@ -37,8 +40,3 @@ Once Terraform completes, you should be able to visit your new site at: https://
 You should see a heading that says 'Welcome.'
 
 That's it.
-
-## Summary
-
-This example showed how to securely (with transcrypt) and extensibly (with Jsonnet)
-manage your infrastructure as code (with Terraform).# iac-sample
