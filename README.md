@@ -13,7 +13,7 @@ manage your infrastructure as code (with Terraform).
 * Fork this repository and open a terminal at the root of the repo
 * Initialize transcrypt `transcrypt -c aes-256-cbc -p 'changeme'`
 * Rekey transcrypt to change encryption password `transcrypt -r -c aes-256-cbc -p 'yournewpass'`
-* In environments/secrets.json, change 'bluemix_api_key' to your IBM Cloud API Key
+* In environments/secrets.jsonnet, change 'bluemix_api_key' to your IBM Cloud API Key
 * In environments/config.jsonnet
   * Set 'org' to something unique in IBM Cloud
   * Set 'route' to something unique in IBM Cloud
@@ -25,10 +25,12 @@ Executing Terraform is a two step process:
 1) Convert Jsonnet configuration file to Terraform JSON file
 2) Execute Terraform using the Terraform JSON file
 
-This can be performed in a single command line execution:
+This can be performed in a few simple commands:
 ```
 cd environments/dev
-jsonnet main.tf.jsonnet > main.tf.json && terraform plan -out plan.out
+jsonnet main.tf.jsonnet > main.tf.json
+terraform init
+terraform plan -out plan.out
 ```
 
 Review the plan, and if satisfied:

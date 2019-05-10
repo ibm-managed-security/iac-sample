@@ -1,2 +1,2 @@
 #pattern  filter=crypt diff=crypt
-secrets.json filter=crypt diff=crypt
+secrets.jsonnet filter=crypt diff=crypt
